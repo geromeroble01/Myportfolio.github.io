@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content"width-device-width, initial scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title> My Personal Portfolio</title>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+	font-family: san-serrif;
+	box-sizing: border-box
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 25px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+img{
+	height: 75px;
+	width: 75px;
+}
+.logo{
+	color: #D0D0D0;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	background-color: #f9004d;
+	border: 2px solid transparent;
+	border-radius: 15px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 25px;
+}
+nav ul li a{
+	color: #D0D0D0;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: #f9004d;
+	transition: .2s;
+}
+.content{
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);
+}
+h1{
+	color: transparent;
+	margin: 20px 0px 20px;
+	font-size: 75px;
+	-webkit-text-stroke: 0.1vw #484848;		
+}
+h1::before{
+	content: attr(data-text);
+	position: absolute;
+	top: 27%;
+	left: 0;
+	width: 0;
+	height: 50%;
+	color: #f9004d;
+	-webkit-text-stroke: 0vw #484848;
+	border-right: 2px solid #f9004d;
+	overflow: hidden;
+	animation: animate 6s linear infinite;
+}
+@keyframes animate{
+	0%,10%,100%	
+	{
+	width: 0;
+	}
+	70%,90%
+	{
+	width: 100%;
+	}
+}
+h3{
+	color: #D0D0D0;
+	font-size: 25px;
+	magin-bottom: 50px;	
+}
+h4{
+	color: #D0D0D0;
+	letter-spacing: 2px;
+	font-size: 25px;
+}
+.about{
+	
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	background-image: url(bg2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.main{
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-arround;
+}
+.images{
+	width: 50%;
+	height: 80%;
+	bottom: 0%;
+	right: 100px;
+}
+.images img{
+	width: 26%;
+	height: 75%;
+	position: absolute;
+	right: 72%;
+	bottom: 0;
+	transform: translateX(-50);
+	transition: bottom 1s, right 1s;
+}
+.images:hover .anime{
+	bottom: 20%;
+}
+.images:hover .boy{
+	right: 65%;
+}
+.about-text h2{
+	color: #D0D0D0;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;	
+	margin-top: 35px;
+}
+.about-text h5{
+	color: #D0D0D0;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	margin-top: 55px;
+	text-transform: capitalize;
+}
+.about-text p{
+	color: #D0D0D0;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 20px;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+.education{
+	background: url(bg2.jpg);
+	width: 100%;
+	padding: 100px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.title h2{
+	color: #D0D0D0;
+	font-size: 75px;
+	width:1130px;
+	margin: 10px auto;
+	text-align: center;
+}
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:500px;
+}
+.card{
+	height: 450px;
+	width: 360px;
+	padding: 20px 35px;
+	background: #191919;
+	border-radius: 20px;
+	margin:	15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.school-logo{
+	border: 2px solid transparent;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+}
+h5{
+	color: #D0D0D0;
+	font-size: 23px;
+	margin-bottom: 15px:
+}
+.pra p{
+	color: #D0D0D0;
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 25px;
+	font-weight: bold;
+}
+.contact-me{
+	width: 100%;
+	height: 290px;
+	background: #191919;
+	align-items: center;
+	flex-direcion: column;
+	justify-content: center;
+}
+.contact-me h2{
+	color: #D0D0D0;
+	font-size: 75px;
+	font-weight: bold;
+	margin-bottom: 15px;
+
+	text-align: center;
+}
+.contact-me p{
+	color: #D0D0D0;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 25px;
+	text-align: center;
+}
+.social{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+ height: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="hero">
+	<nav>
+	<h2 class="logo"><img src="logo.png">&nbsp&nbspPort<span>folio</span></h2>
+	<ul>
+	<li><a href="#home">Home</a></li>
+	<li><a href="#about">About ME</a></li>
+	<li><a href="#education">Educational</a></li>
+	<li><a href="#contacts">Contacts</a></li>
+	</ul>
+	</nav>
+		
+		<div class="content">	
+		<h4>Hello, my name is</h4>
+		<h1 data-text="Gerome B. Roble">Gerome B. Roble</h1>
+		<h3>I'am a BSIS Student in CHMSU</h3>
+		</div>
+	</div>
+
+	<section  id="about" class="about">
+	<div class="main">
+		<div class="images">
+		<img src="bg3.png" class="anime">
+		<img src="me.png" class="boy">
+		</div>
+	<div class="about-text">
+	<h2>About <span>ME</span></h2>	
+	<h5>BSIS CHMSU STUDENT</h5>
+	<p> I am a college student in Carlos Hilado Memorial State University(CHMSU).
+	Curretly taking BSIS course or the Bachelor of Science in Information System.
+	My hobbies are drawing, playing drums, and playing mobile games.
+	</p>
+	</div>
+	</div>
+	</section>
+
+	<div id="education" class="education">
+		<div class="title">
+		<h2>Educational <span>Attainment</span></h2>
+		</div>
+		
+		<div class="box">
+		<div class="card">
+		<img src="elem.png" class="school-logo">
+		<h5>Elementary</h5>
+		<div class="pra">
+		<p> "Governor Emilio Gaston Mem. Elem. School"<br>
+		Year Graduated: 2014<br>
+		"With Good Moral Conduct"
+		</p>
+		</div>
+		</div>
+		<div class="card">
+		<img src="high.jpg" class="school-logo">
+		<h5>High School</h5>
+		<div class="pra">
+		<p>"Dona Montserrat Lopez Mem. High School" <br>
+		"Junior High"<br>
+		Strand: Technical Vocational Livelihood<br>
+		"Major in Electricity"<br>
+		Year Graduated: 2018<br>
+		"With Good Moral Conduct"
+		</p>
+		</div>
+		</div>
+		<div class="card">
+		<img src="high.jpg" class="school-logo">
+		<h5>High School</h5>
+		<div class="pra">
+		<p> "Dona Montserrat Lopez Mem. High School"<br>
+		"Senior High"<br>
+		Strand: Information in Communication Technology<br>
+		"Major in Computer System Servicing"<br>
+		Year Graduated: 2020<br>
+		"With Honors"<br>
+		"With Good Moral Conduct"
+		</p>
+		</div>
+		</div>
+		<div class="card">
+		<img src="college.png" class="school-logo">
+		<h5>College</h5>
+		<div class="pra">
+		<p> "Carlos Hilado Memorial State University"<br>
+		Third Year: (A.Y. 2022-2023)<br>
+		Course: Bachelor of Science in Information System<br>
+		Ari Studyante Lang Kaya pa man ah
+		</p>
+		</div>
+		</div>
+		</div>
+	</div>
+	<div id="contacts" class="contact-me">
+	<h2>Contact <span>Me</span></h2> <br>
+	<p> This my very own Portfolio Website<br>
+	Contact me through</p>
+	<div class="social">
+	<a href="#" class="fa fa-facebook"></i></a>
+	<a href="#" class="fa fa-instagram"></i></a>
+	<a href="#" class="fa fa-twitter"></i></a>
+	</div>
+	</div>
+</body>
+</html>
